@@ -1,5 +1,4 @@
 --the script to remove all tables in the database
-
 DROP TABLE IF EXISTS users CASCADE;
 
 create table users
