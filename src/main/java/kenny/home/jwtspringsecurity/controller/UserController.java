@@ -14,7 +14,7 @@ import java.security.Principal;
 import java.util.Map;
 
 @RestController
-@RequestMapping("v1/users")
+@RequestMapping("/v1/users")
 public class UserController {
 
     UserService userService;
