@@ -43,7 +43,6 @@ public class AuthService implements UserDetailsService {
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authRequest.getEmail(), authRequest.getPassword()));
             User user = userRepository.findByEmail(authRequest.getEmail()).get();
             String token = jwtUtil.Sign(user.getId().toString());
-
             HttpHeaders headers = new HttpHeaders();
             headers.set("Authorization", token);
             return ResponseEntity.ok().headers(headers).body(null);
